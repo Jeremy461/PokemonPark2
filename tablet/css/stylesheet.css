@@ -1,0 +1,62 @@
+html {
+    text-align: center;
+    background-image: url("http://www.cartoondistrict.com/wp-content/uploads/2014/12/pokemon-wallpaper-HD-for-desktop-25.jpg");
+    background-size: cover;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+ul {
+    text-align: center;
+    padding-left: 0;
+}
+input#round{
+    margin-top: 30px;
+    width:100px; /*same as the height*/
+    height:100px; /*same as the width*/
+    background-color:#ff0000;
+    border:1px solid #ff0000; /*same colour as the background*/
+    color:#fff;
+    font-size:1.3em;
+    text-align: center;
+    /*set the border-radius at half the size of the width and height*/
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    /*give the button a small drop shadow*/
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+/*Hover button state*/
+input#round:hover{
+    background:#c20b0b;
+    border:1px solid #c20b0b;
+    /*reduce the size of the shadow to give a pushed effect*/
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+input:focus{
+    outline: 0;
+}
+
+.pokeball{
+    display: inline;
+}
+#pokeBallGif{
+    margin-top: 100px;
+}
+#loginForm{
+    margin-left: 4px;
+}
+#pokePoints{
+    background-color: black;
+    width: 200px;
+    height: 40px;
+    margin-left: 568px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    padding-top: 20px;
+
+}

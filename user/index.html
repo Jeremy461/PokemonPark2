@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../user/css/stylesheet.css" rel="stylesheet" type="text/css">
+    <title>Pokemon</title>
+</head>
+<body id="body">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="../tablet/js/main.js"></script>
+
+    <h1>Scan the QR-code!</h1>
+
+    <canvas></canvas>
+
+    <br>
+
+    <h3>Select your camera</h3>
+
+
+    <select></select>
+
+    <ul></ul>
+    <script type="text/javascript" src="qr_code_js/qrcodelib.js"></script>
+    <script type="text/javascript" src="qr_code_js/webcodecamjs.js"></script>
+    <script type="text/javascript">
+        var txt = "innerText" in HTMLElement.prototype ? "innerText" : "textContent";
+        var arg = {
+            resultFunction: function(result) {
+                var aChild = document.createElement('li');
+                aChild[txt] = result.format + ': ' + result.code;
+                document.querySelector('body').appendChild(aChild);
+            }
+        };
+        var decoder = new WebCodeCamJS("canvas").buildSelectMenu('select', 'environment|back').init(arg).play();
+        /*  Without visible select menu
+         var decoder = new WebCodeCamJS("canvas").buildSelectMenu(document.createElement('select'), 'environment|back').init(arg).play();
+         */
+        document.querySelector('select').addEventListener('change', function(){
+            decoder.stop().play();
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
