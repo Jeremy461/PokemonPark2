@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.gitattributes" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/.gitignore" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/.idea" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/tablet/.gitattributes" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/tablet/.gitignore" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/tablet/css" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/tablet/js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/user/audio" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/user/fonts" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/user/qr_code_css" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/user/qr_code_js" charset="windows-1252" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
