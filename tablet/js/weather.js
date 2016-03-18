@@ -10,8 +10,15 @@ $(document).ready(function() {
       var currently = weather.currently;
 
       console.log(temp);
-
       console.log(currently);
+
+      $.ajax({
+        url: 'pokemon.php',
+        data:{'weather':currently},
+        success: function(data) {
+          console.log(data.testData);
+        }
+      });
 
 
       var weatherData = createDomElement({
@@ -28,6 +35,7 @@ $(document).ready(function() {
     error: function(error) {
       $("#weather").html('<p>'+error+'</p>');
     }
+
+
   });
 });
-

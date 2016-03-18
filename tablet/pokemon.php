@@ -6,11 +6,15 @@ $id = 0;
 //$typeId
 
 
+//$weatherTest = $_GET['weather'];
+//$returnData = [
+//    'testData' => $weatherTest
+//];
+
 
 //Choose random pokemon ID between 1-151
 $id = rand(1, 151);
 //Made variable with API link + random chosen ID
-//$data = file_get_contents($pokemonName.$id.'/');
 $data = file_get_contents($pokemonName.$id.'/');
 
 //decode, niet altijd
@@ -35,5 +39,6 @@ $pokeDataReturn = json_encode($pokemonArray);
 //header setten
 
 echo $pokeDataReturn;
-
+//
+//echo json_encode($returnData);
 

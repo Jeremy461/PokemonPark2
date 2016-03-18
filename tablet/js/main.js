@@ -78,8 +78,6 @@ function getPokemonHandler(data) {
     pokeImg.setAttribute('id', "pokemonImg");
     document.getElementById("pokemonContainer").appendChild(pokeImg);
 
-    var br = document.createElement('br');
-    document.getElementById('br').appendChild(br);
 
     //QR-code generator
     var qrCode = "https://api.qrserver.com/v1/create-qr-code/?data=http://www.dragonflycave.com/dpsprites/" + data.pokeData.name + ".png";
@@ -87,7 +85,6 @@ function getPokemonHandler(data) {
     qrCodeGenerator.setAttribute('src', qrCode);
     qrCodeGenerator.setAttribute('id', "qrCode");
     document.getElementById("pokemonContainer").appendChild(qrCodeGenerator);
-
 
     //sound
     var mp3 = ".mp3";
