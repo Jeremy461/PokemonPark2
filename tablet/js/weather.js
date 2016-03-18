@@ -19,7 +19,7 @@ $(document).ready(function() {
         attributes: {
           id: 'weatherData'
         },
-        content: temp + currently
+        content: temp + "C. " + currently
       });
       document.getElementById("weatherContainer").appendChild(weatherData);
       //$("#weather").html(html);
@@ -28,11 +28,6 @@ $(document).ready(function() {
     error: function(error) {
       $("#weather").html('<p>'+error+'</p>');
     }
-
   });
-
-
-
-
 });
 
