@@ -1,16 +1,15 @@
 
+
 window.addEventListener('load', init);
 
 
 function init(){
+    document.getElementById("round")
+        .addEventListener("click", getPokemonData);
 
-    //playMusic();
 }
 
-    document.getElementById("generator").addEventListener("click", function () {
-        console.log("test1");
-        getPokemonData();
-    });
+
 
 
 
@@ -21,7 +20,6 @@ function playMusic() {
 }
 
 function getPokemonData(){
-    console.log("test2");
     $.ajax({
         dataType: "json",
         url: 'pokemon.php',
@@ -35,19 +33,19 @@ function clearBox(elementID)
 }
 
 function getPokemonHandler(data) {
-    console.log("test3");
+
+    var rnd = Math.floor((Math.random() * data.pokeData.length));
+    console.log(data.pokeData[rnd]);
 
     //reset previous records
     clearBox('pokemonContainer');
-
-
     //name and type
     var pokemonName = createDomElement({
         tagName: 'h1',
         attributes: {
             id: 'pokemonName'
         },
-        content: data.pokeData.name
+        content: data.pokeData[rnd].name
     });
     document.getElementById("pokemonContainer").appendChild(pokemonName);
 
@@ -72,7 +70,7 @@ function getPokemonHandler(data) {
 
     //image
     var gif = ".gif";
-    var image = "http://www.pokestadium.com/sprites/xy/" + data.pokeData.name + gif;
+    var image = "http://www.pokestadium.com/sprites/xy/" + data.pokeData[rnd].name + gif;
     var pokeImg = document.createElement("img");
     pokeImg.setAttribute('src', image);
     pokeImg.setAttribute('id', "pokemonImg");

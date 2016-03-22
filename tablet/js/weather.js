@@ -9,14 +9,11 @@ $(document).ready(function() {
       var region = weather.region;
       var currently = weather.currently;
 
-      console.log(temp);
-      console.log(currently);
-
       $.ajax({
-        url: 'pokemon.php',
-        data:{'weather':currently},
+        url: 'pokemon.php?weather=' + currently + '&temperature=' + temp,
         success: function(data) {
-          console.log(data.testData);
+          //console.log(data);
+          //console.log("ajaxax call gelukt")
         }
       });
 
