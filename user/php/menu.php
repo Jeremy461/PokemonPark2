@@ -12,7 +12,9 @@
 <body id="body">
 <div id="titel">PokéPark Rotterdam</div>
 <br><br>
-<button class ="btn">Catch</button><br>
+<form id="catch" action="../qrReader.html">
+<button type="submit" class ="btn">Catch</button></form>
+<br>
 <button class ="btn">List</button><br>
 <button class ="btn">Poké Balls</button>
 

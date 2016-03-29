@@ -65,7 +65,7 @@ mysqli_query($db, $query);
         </ul>
     <?php } ?>
 </div>
-<form id="loginForm" method="post" action="index.php">
+<form id="loginForm" method="post" action="php/menu.php">
     <h1>Username:</h1>
     <input id="username" type="text" name="username">
     <h1>Password:</h1>
