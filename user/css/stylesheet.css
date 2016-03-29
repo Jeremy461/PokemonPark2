@@ -19,6 +19,50 @@ select{
     border-radius: 5px;
 }
 
+h1{
+    font-family: pokemonFont;
+}
+
+h2{
+    font-family: pokemonFont;
+}
+
+#titel{
+    font-size: 45px;
+    font-family: pokemonFont;
+}
+
+.btn {
+    background: #e3e3e3;
+    background-image: -webkit-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -moz-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -ms-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -o-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: linear-gradient(to bottom, #e3e3e3, #88949c);
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    font-family: pokemonFont;
+    color: black;
+    font-size: 30px;
+    padding: 10px 20px 10px 20px;
+    border: solid #070808 1px;
+    text-decoration: none;
+    min-width: 15%;
+    height: 5%;
+    margin: 1%;
+}
+
+.btn:hover {
+    background: #e3e3e3;
+    background-image: -webkit-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -moz-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -ms-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -o-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: linear-gradient(to bottom, #e3e3e3, #88949c);
+    text-decoration: none;
+}
+
 ul {
     text-align: center;
     padding-left: 0;
@@ -52,6 +96,11 @@ input#round:hover{
 }
 input:focus{
     outline: 0;
+}
+
+@font-face {
+    font-family: pokemonFont;
+    src: url(Pokemon%20Solid.ttf);
 }
 
 input{
