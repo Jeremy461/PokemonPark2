@@ -1,3 +1,11 @@
-/**
- * Created by Jeremy on 15-3-2016.
- */
+window.addEventListener('load', init);
+
+function init(){
+    document.getElementById("round")
+        .addEventListener("click", loginHandler);
+
+}
+
+function loginHandler(){
+
+}

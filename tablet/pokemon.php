@@ -5,15 +5,17 @@ $pokemonType = "http://pokeapi.co/api/v2/type/";
 $id = 0;
 $typeId = 0;
 
-
+//weather filter
 $weather = isset($_GET['weather']) ? $_GET['weather'] : '';
 $temperature =isset($_GET['temperature']) ? $_GET['temperature'] : '';
 $returnData = [
     'weather' => $weather,
     'temperature' => $temperature
 ];
-//$weather = "thunderstorms";
-//$temperature = 12;
+
+////hard coded weather test
+//$weather = "cloudy";
+//$temperature = 26;
 
 
 $waterArray = ["drizzle", "freezing rain", "showers", "mixed rain and hail"];

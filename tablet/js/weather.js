@@ -13,7 +13,7 @@ $(document).ready(function() {
         url: 'pokemon.php?weather=' + currently + '&temperature=' + temp,
         success: function(data) {
           //console.log(data);
-          //console.log("ajaxax call gelukt")
+          //console.log("ajax call gelukt")
         }
       });
 
