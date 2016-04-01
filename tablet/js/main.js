@@ -87,7 +87,7 @@ function getPokemonHandler(data) {
 
 
     //QR-code generator
-    var qrCode = "https://api.qrserver.com/v1/create-qr-code/?data=localhost:63342:/PokemoninTheParkV0.2/user/pokemonfound.php?pokemonname=" + data.pokeData[rnd].name;
+    var qrCode = "https://api.qrserver.com/v1/create-qr-code/?data=stud.hosted.hr.nl/0909756/websites/PokemonPark2/user/php/pokemonfound.php?pokemonname=" + data.pokeData[rnd].name;
     var qrCodeGenerator = document.createElement("img");
     qrCodeGenerator.setAttribute('src', qrCode);
     qrCodeGenerator.setAttribute('id', "qrCode");

@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once "../data.php";
+require_once "../../data.php";
 
 
 
@@ -27,7 +27,7 @@ if(isset($_POST['catch'])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="../css/stylesheet.css" rel="stylesheet" type="text/css">
 
     <title>Pokemon</title>
 
@@ -43,6 +43,12 @@ if(isset($_POST['catch'])){
 
 <div id="weatherContainer">
 </div>
+
+
+<form id="catchPokemon" method="post" action="index.html">
+    <input class="btn" type="submit" name="catch" value="Catch">
+    <input class="btn" type="submit" name="flee" value="Flee">
+</form>
 
 <form id="catchPokemon" method="post" action="index.php">
     <input class="btn" type="submit" name="catch" value="Catch">
