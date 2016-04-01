@@ -40,14 +40,23 @@ function getPokemonHandler(data) {
     //reset previous records
     clearBox('pokemonContainer');
     //name and type
-    var pokemonName = createDomElement({
-        tagName: 'h1',
-        attributes: {
-            id: 'pokemonName'
-        },
-        content: data.pokeData[rnd].name
+    //var pokemonName = createDomElement({
+    //    tagName: 'h1',
+    //    attributes: {
+    //        id: 'pokemonName'
+    //    },
+    //    content: data.pokeData[rnd].name
+    //});
+    //document.getElementById("pokemonContainer").appendChild(pokemonName);
+
+
+    $.ajax({
+        url: 'index.php?pokemonname=' + data.pokeData[rnd].name,
+        success: function(data) {
+            //console.log(data);
+            //console.log("ajax call gelukt")
+        }
     });
-    document.getElementById("pokemonContainer").appendChild(pokemonName);
 
     var pokemonType = createDomElement({
         tagName: 'h1',
@@ -68,21 +77,21 @@ function getPokemonHandler(data) {
         data.pokeData.name = "nidoranf";
     }
 
-    //image
-    var gif = ".gif";
-    var image = "http://www.pokestadium.com/sprites/xy/" + data.pokeData[rnd].name + gif;
-    var pokeImg = document.createElement("img");
-    pokeImg.setAttribute('src', image);
-    pokeImg.setAttribute('id', "pokemonImg");
-    document.getElementById("pokemonContainer").appendChild(pokeImg);
+    ////image
+    //var gif = ".gif";
+    //var image = "http://www.pokestadium.com/sprites/xy/" + data.pokeData[rnd].name + gif;
+    //var pokeImg = document.createElement("img");
+    //pokeImg.setAttribute('src', image);
+    //pokeImg.setAttribute('id', "pokemonImg");
+    //document.getElementById("pokemonContainer").appendChild(pokeImg);
 
 
-    ////QR-code generator
-    //var qrCode = "https://api.qrserver.com/v1/create-qr-code/?data=http://www.dragonflycave.com/dpsprites/" + data.pokeData.name + ".png";
-    //var qrCodeGenerator = document.createElement("img");
-    //qrCodeGenerator.setAttribute('src', qrCode);
-    //qrCodeGenerator.setAttribute('id', "qrCode");
-    //document.getElementById("pokemonContainer").appendChild(qrCodeGenerator);
+    //QR-code generator
+    var qrCode = "https://api.qrserver.com/v1/create-qr-code/?data=localhost:63342:/PokemoninTheParkV0.2/user/pokemonfound.php?pokemonname=" + data.pokeData[rnd].name;
+    var qrCodeGenerator = document.createElement("img");
+    qrCodeGenerator.setAttribute('src', qrCode);
+    qrCodeGenerator.setAttribute('id', "qrCode");
+    document.getElementById("pokemonContainer").appendChild(qrCodeGenerator);
 
     //sound
     var mp3 = ".mp3";

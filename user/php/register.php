@@ -1,6 +1,6 @@
 <?php
 
-require_once "data.php";
+require_once "../../data.php";
 
 if (isset($_POST['submit'])) {
 

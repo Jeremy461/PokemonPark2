@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once "php/data.php";
+require_once "../data.php";
 //Wanneer er op de inlog-knop gedrukt wordt:
 if (isset($_POST['login'])) {
 
