@@ -9,6 +9,7 @@ html {
 
 body{
     margin-top: 10%;
+
 }
 
 canvas{
@@ -126,3 +127,33 @@ input{
     padding-top: 20px;
 
 }
+table {
+    background: #e3e3e3;
+    background-image: -webkit-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -moz-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -ms-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: -o-linear-gradient(top, #e3e3e3, #88949c);
+    background-image: linear-gradient(to bottom, #e3e3e3, #88949c);
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    font-family: pokemonFont;
+    color: black;
+    font-size: 30px;
+    padding: 10px 20px 10px 20px;
+    border: solid #070808 1px;
+    text-decoration: none;
+    min-width: 15%;
+    height: 5%;
+    margin: 1%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#more{
+    display:inline;
+}
+#back{
+    display:inline;
+}
+

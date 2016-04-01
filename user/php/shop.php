@@ -14,22 +14,27 @@
 
 <table>
     <tr>
+        <td></td>
         <td>Pokéballs</td>
         <td>#</td>
     </tr>
     <tr>
+        <td><img src="../pokeballs_img/pokeballv2.png"> </td>
         <td>Poké Ball</td>
         <td>x</td>
     </tr>
     <tr>
+        <td><img src="../pokeballs_img/greatballv2.png"></td>
         <td>Great Ball</td>
         <td>x</td>
     </tr>
     <tr>
+        <td><img src="../pokeballs_img/ultraballv2.png"></td>
         <td>Ultra Ball</td>
         <td>x</td>
     </tr>
     <tr>
+        <td><img src="../pokeballs_img/masterballv2.png"></td>
         <td>Master Ball</td>
         <td>x</td>
     </tr>
