@@ -11,13 +11,33 @@
 </head>
 <body id="body">
 <div id="titel">PokéPark Rotterdam</div>
-<br><br>
-<form id="catch" action="../qrReader.html">
-<button type="submit" class ="btn">Catch</button></form>
-<br>
-<button class ="btn">List</button><br>
-<form id="pokeballs" action="pokeballs.php">
-<button class ="btn">Poké Balls</button></form>
+
+<table>
+    <tr>
+        <td>Pokéballs</td>
+        <td>#</td>
+    </tr>
+    <tr>
+        <td>Poké Ball</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <td>Great Ball</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <td>Ultra Ball</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <td>Master Ball</td>
+        <td>x</td>
+    </tr>
+</table>
+
+<form id="more" action="shop.php">
+    <button class ="btn">Get More</button>
+</form>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="../js/main.js"></script>
