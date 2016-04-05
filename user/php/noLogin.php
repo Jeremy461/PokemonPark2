@@ -1,9 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['LoggedIn'])){
-    header:('Location: noLogin.php');
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,19 +10,17 @@ if(!isset($_SESSION['LoggedIn'])){
     <script src="js/prefixfree.min.js"></script>
 </head>
 <body id="body">
-<div id="titel">PokéPark Rotterdam</div>
-<br><br>
-<form id="catch" action="../qrReader.html">
-<button type="submit" class ="btn">Catch</button></form>
-<br>
-<form id="menu" action="pokedex.php">
-<button class ="btn">List</button></form>
-<br>
-<form id="pokeballs" action="pokeballs.php">
-<button class ="btn">Poké Balls</button></form>
+
+<div class="errors">
+
+</div>
+<h2>Not Logged in! <a href="../index.php">Log in here</a></h2>
+
+<h2>No account? <a href="php/register.php">Register here</a></h2>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="../js/main.js"></script>
 
 </body>
 </html>
+

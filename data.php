@@ -1,8 +1,8 @@
 <?php
-$host = "sql.cmi.hro.nl"; //sql.cmi.hro.nl -- localhost
-$database = "0909756"; //studentnummer -- pokemon_in_the_park
-$user = "0909756"; //studentnummer -- root
-$password = "iethaequ"; //iethaequ
+$host = "localhost"; //sql.cmi.hro.nl -- localhost
+$database = "pokemon_in_the_park"; //studentnummer -- pokemon_in_the_park
+$user = "root"; //studentnummer -- root
+$password = ""; //iethaequ
 
 $db = mysqli_connect($host, $user, $password, $database) or die("Error: " . mysqli_connect_error());
 

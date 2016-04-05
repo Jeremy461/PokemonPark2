@@ -39,6 +39,7 @@ function getPokemonHandler(data) {
 
     //reset previous records
     clearBox('pokemonContainer');
+
     //name and type
     //var pokemonName = createDomElement({
     //    tagName: 'h1',
@@ -51,7 +52,7 @@ function getPokemonHandler(data) {
 
 
     $.ajax({
-        url: 'index.php?pokemonname=' + data.pokeData[rnd].name,
+        url: 'pokemonfound.php?pokemonname=' + data.pokeData[rnd].name,
         success: function(data) {
             //console.log(data);
             //console.log("ajax call gelukt")
@@ -78,8 +79,7 @@ function getPokemonHandler(data) {
     }
 
     ////image
-    //var gif = ".gif";
-    //var image = "http://www.pokestadium.com/sprites/xy/" + data.pokeData[rnd].name + gif;
+    //var image = "http://www.pokestadium.com/sprites/xy/" + data.pokeData[rnd].name + ".gif";
     //var pokeImg = document.createElement("img");
     //pokeImg.setAttribute('src', image);
     //pokeImg.setAttribute('id', "pokemonImg");
@@ -87,7 +87,8 @@ function getPokemonHandler(data) {
 
 
     //QR-code generator
-    var qrCode = "https://api.qrserver.com/v1/create-qr-code/?data=stud.hosted.hr.nl/0909756/websites/PokemonPark2/user/php/pokemonfound.php?pokemonname=" + data.pokeData[rnd].name;
+    var qrCode = "https://api.qrserver.com/v1/create-qr-code/?data=stud.hosted.hr.nl/0909756/websites/PokemonPark2/user/php/" +
+        "pokemonfound.php?pokemonname=" + data.pokeData[rnd].name;
     var qrCodeGenerator = document.createElement("img");
     qrCodeGenerator.setAttribute('src', qrCode);
     qrCodeGenerator.setAttribute('id', "qrCode");

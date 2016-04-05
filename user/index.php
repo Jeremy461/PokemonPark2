@@ -28,6 +28,7 @@ if (isset($_POST['login'])) {
         $query = "SELECT * FROM accounts WHERE username = '$username'
                   AND password = '$password'";
         $result = mysqli_query($db, $query);
+        var_dump($result);
         if (mysqli_num_rows($result) > 0){
 header('Location: data.php');
 $_SESSION['LoggedIn'] = $username;

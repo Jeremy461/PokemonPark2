@@ -2805,6 +2805,7 @@ self.onmessage = function(e) {
     CreateTable();
     CreateScanTable();
     var FinalResult = Main();
+    console.log(FinalResult);
     if (FinalResult.length > 0) {
         postMessage({
             result: checkFinalResult(FinalResult),
