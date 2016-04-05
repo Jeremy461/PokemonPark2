@@ -4,9 +4,9 @@ require_once "../../data.php";
 
 if (isset($_POST['submit'])) {
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $confirm = $_POST['confirm'];
+    $username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = md5(mysqli_real_escape_string($db, $_POST['password']));
+    $confirm = md5($_POST['confirm']);
 
 
     //Er wordt gekeken of 1 of meerdere van de verkregen variabelen leeg zijn, als dit het geval is wordt er een error toegevoegd aan de errors-array.
@@ -35,8 +35,8 @@ if (isset($_POST['submit'])) {
         //De query wordt uigevoerd
         mysqli_query($db, $query);
 
-        //De gebruiker wordt naar de registered-pagina gestuurd
-        header('Location: registered.php');
+        //De gebruiker wordt naar het hoofdmenu gestuurd
+        header('Location: menu.php');
 
 
 
@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
         </ul>
     <?php } ?>
 </div>
-<form id="registerForm" method="post" action="../index.php">
+<form id="registerForm" method="post" action="">
 
 
 

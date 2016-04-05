@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 require_once "../data.php";
 //Wanneer er op de inlog-knop gedrukt wordt:
 if (isset($_POST['login'])) {
@@ -28,11 +29,16 @@ if (isset($_POST['login'])) {
         $query = "SELECT * FROM accounts WHERE username = '$username'
                   AND password = '$password'";
         $result = mysqli_query($db, $query);
-        var_dump($result);
+
+
+
+        $_SESSION['LoggedIn'] = $username;
+
         if (mysqli_num_rows($result) > 0){
-header('Location: data.php');
-$_SESSION['LoggedIn'] = $username;
-exit();
+
+
+header('Location: php/menu.php');
+
 
 //Als er geen overeenkomsten zijn zal er een error worden toegevoegd aan de errors-array
 } else {
@@ -66,7 +72,7 @@ mysqli_query($db, $query);
         </ul>
     <?php } ?>
 </div>
-<form id="loginForm" method="post" action="php/menu.php">
+<form id="loginForm" method="post" action="">
     <h1>Username:</h1>
     <input id="username" type="text" name="username">
     <h1>Password:</h1>

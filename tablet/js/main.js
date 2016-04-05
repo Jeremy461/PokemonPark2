@@ -6,6 +6,7 @@ window.addEventListener('load', init);
 function init(){
     document.getElementById("round")
         .addEventListener("click", getPokemonData);
+    playMusic();
 
 }
 
